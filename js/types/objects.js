@@ -8,7 +8,7 @@ import {
   addLinesToBox,
   svgElementToPixiSprite,
   addImageToBox,
-  addHoverModal,
+  showParticleDetails,
   removeImageFromBox,
 } from "../draw/box.js";
 import { textToSVG } from "../lib/generate-svg.js";
@@ -44,7 +44,7 @@ class EDMObject {
     box.cullable = true;
     box.cullArea = new Rectangle(box.x, box.y, box.width, box.height);
 
-    addHoverModal(box, this.objectModalLines());
+    showParticleDetails(box, this.objectModalLines());
     return [box, nextY];
   }
 
